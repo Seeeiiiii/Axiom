@@ -53,18 +53,24 @@ body {
     width: 100%;
 }
 
+.main {
+    position: relative;
+    height: 100vh;
+    overflow-y: auto;  
+}
+
 .logo {
-    flex: 1;
-    justify-content: flex-end;
-    align-items: flex-end;
-    overflow: hidden;
+    position: fixed;  
+    bottom: 0;         
+    right: -190px;     
+    z-index: -1;        
+    pointer-events: none;
 }
 
 .logo img {
-    max-height: 100vh;
+    max-height: 100vh;   
     width: auto;
-    object-fit: contain;
-    margin-right: -200px;
+    opacity: 0.8;       
 }
 
 .create {
@@ -82,7 +88,6 @@ body {
 
 .create .col:nth-child(1) {
     background-color: #6f42c1;
-    color: #ffffff ;
 }
 
 .create .col:nth-child(2) {
@@ -90,3 +95,7 @@ body {
     color: black;
 }
 
+.create .btn {
+    text-decoration: none;
+    color: #ffffff;
+}
